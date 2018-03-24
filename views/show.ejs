@@ -1,0 +1,33 @@
+<% include ./partials/header %>
+
+<style>
+  img{
+    width: 100%;
+  }
+
+  form{
+    display: inline-block;
+  }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="row">
+        <h1><%= location.name %></h1>
+        <div class="col-xs-8">
+          <h2><%= location.phone %> | <small><%= location.address %></small></h2>
+          <h4>Welcome to <%= location.name %></h4>
+          <p><%= location.name %> features lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus provident rem, amet quod quo quidem veritatis ipsum ut, laudantium saepe. Impedit eos molestiae esse dicta ipsum, quidem ad at est?</p>
+        </div>
+        <div class="col-xs-4">
+          <img src="<%= location.image %>" />
+        </div>
+      </div>
+      <form id="deleteForm" action="/dashboard/locations/<%= location._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-danger">Delete</button>
+      </form>
+      <a class="btn btn-info" href="/dashboard/locations/<%= location.id %>/edit" class="btn btn-alert">Edit</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<% include ./partials/header %>
+<style>
+  *{
+    box-sizing: border-box;
+  }
+
+  .locations-display h2{
+    text-align: center;
+  }
+
+  .locations-display a{
+    color: #343434;
+    text-decoration: none;
+  }
+
+  .locations-display a:hover{
+    color: #343434;
+    text-decoration: none;
+  }
+
+  .locations-display .row{
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    box-shadow: 1px 1px 1px #ccc;
+    transition: linear .25s;
+  }
+
+  .locations-display .row:hover{
+    border: 1px solid #ccc;
+  }
+
+  img{
+    width: 100%;
+    min-height: 150px;
+  }
+</style>
+  <div class="locations-display container">
+    <h2>Your Locations</h2>
+    <% locations.forEach(function(location){ %>
+      <a href="/dashboard/locations/<%= location.id %>">
+        <div class="row">
+          <div class="col-xs-3">
+            <img src="<%= location.image %>" />
+          </div>
+          <div class="col-xs=9">
+            <h4>Name: <%= location.name %></h4>
+            <p>Location: <%= location.city %></p>
+            <p>Phone: <%= location.phone %></h4>
+            <p><%= location.info.substring(0, 200) %>...</p>
+          </div>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- FONT AWESEOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <script src="../js/wysiwyg.js"></script> -->
+</head>
+<body onload="editable()">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    nav{
+      width: 100%;
+      height: 40px;
+      background-color: #343434;
+      line-height: 40px;
+    }
+
+    nav ul{
+      float: right;
+      height: 40px;
+      margin: 0;
+    }
+
+    nav ul li{
+      list-style: none;
+      display: inline-block;
+      padding: 0 5px;
+      text-align: center;
+    }
+
+    nav ul li:hover{
+      background-color: #232323;
+    }
+
+    nav ul a{
+      color: #fff;
+    }
+
+    nav ul a:hover{
+      color: #e6e6e6;
+      text-decoration: none;
+    }
+  </style>
+  <nav>
+    <ul>
+      <a href="/dashboard"><li>Dashboard</li></a>
+      <a href="/dashboard/locations"><li>All Locations</li></a>
+      <a href="/dashboard/locations/new"><li>Add a new location</li></a>
+    </ul>
+  </nav>

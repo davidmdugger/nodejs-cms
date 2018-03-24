@@ -1,0 +1,26 @@
+<% include ./partials/header.ejs %>
+  <style>
+    form #new-info{
+      height: 300px;
+    }
+  </style>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <h2>New Location</h2>
+        <form action="/dashboard" method="POST">
+          <input class="form-control" type="text" name="location[name]" placeholder="Property Name" required/>
+          <input class="form-control" type="text" name="location[phone]" placeholder="Phone"/>
+          <input class="form-control" type="text" name="location[address]" placeholder="Street Address"/>
+          <input class="form-control" type="text" name="location[city]" placeholder="City"/>
+          <input class="form-control" type="text" name="location[state]" placeholder="State"/>
+          <input class="form-control" type="text" name="location[zip]" placeholder="Zip Code"/>
+          <input class="form-control" type="text" name="location[image]" placeholder="Image"/>
+          <textarea id="new-body" class="form-control" name="location[info]" placeholder="Write some info about the property"></textarea>
+          <input class="btn btn-success" type="submit" />
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
